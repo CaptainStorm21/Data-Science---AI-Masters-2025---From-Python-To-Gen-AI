@@ -84,7 +84,7 @@ nested_list = [ "France", "Paris", 48.8566, 2.3522, ["Eiffel Tower", "Louvre Mus
 print(nested_list)  # Print the entire nested list
 # Accessing elements in the nested list
 print(nested_list[0])  # Country        
-print(nested_list[-1][2])  # Notre-Dame Cathedral
+print(nested_list[1][2])  # Notre-Dame Cathedral
 # Adding a new attraction to the nested list
 nested_list[-1].append("Montmartre")
 print(nested_list[-1])  # Print the updated attractions list
@@ -98,3 +98,100 @@ print(len(nested_list[-1]))  # Number of attractions
 # Copying the nested list
 copied_nested_list = nested_list.copy()                 
 print(copied_nested_list)  # Print the copied nested list
+
+# List Concat
+list_cities = ["New York", "Los Angeles", "Chicago"]
+list_countries = ["USA", "USA", "USA"]
+combined_list = list_cities + list_countries
+print(combined_list)  
+# Combined list of cities and countries 
+# Repeating lists
+repeated_cities = list_cities * 2
+print(repeated_cities)  # Print the repeated list of cities     
+# Checking if a list is empty
+is_empty_cities = len(list_cities) == 0
+print(is_empty_cities)  # False, since list_cities has elements     
+# Length of the combined list
+print(len(combined_list))   # Type of the combined list
+print(type(combined_list))  # <class 'list'>, since combined_list is a list
+# Accessing elements in the combined list
+print(combined_list[0])  # First element        
+print(combined_list[3])  # Fourth element
+# Slicing the combined list
+print(combined_list[1:4])  # Elements from index 1 to 3 
+# Reversing the combined list
+combined_list.reverse()
+print(combined_list)  # Print the reversed combined list
+# Sorting the combined list
+combined_list.sort()
+print(combined_list)  # Print the sorted combined list
+# Nested list example
+nested_combined_list = [["New York", "Los Angeles"], ["USA", "USA"]]
+print("New York" in nested_combined_list[0])  # True, since "New York" is in the first sublist
+# Accessing elements in the nested combined list
+print(nested_combined_list[0][1])  # Los Angeles
+
+# Adding a new city to the nested combined list
+nested_combined_list[0].append("Chicago")
+print(nested_combined_list[0])  # Print the updated first sublist               
+# Removing a city from the nested combined list 
+
+nested_combined_list[0].remove("Los Angeles")
+print(nested_combined_list[0])  # Print the updated first sublist after removal
+# Checking if a city exists in the nested combined list
+print("Chicago" in nested_combined_list[0])  # True, since "Chicago" is in the first sublist        
+# Length of the nested combined list
+print(len(nested_combined_list[0]))  # Number of cities in the first sublist
+# Copying the nested combined list
+copied_nested_combined_list = nested_combined_list.copy()
+print(copied_nested_combined_list)  # Print the copied nested combined list     
+# Clearing the combined list
+combined_list.clear()
+print(combined_list)  # Should print an empty list after clearing
+# Concatenating two lists
+list_a = ["apple", "banana", "cherry"]
+list_b = ["date", "elderberry", "fig"]
+concatenated_fruits = list_a + list_b
+print(concatenated_fruits)
+# Repeating the concatenated list
+repeated_fruits = concatenated_fruits * 2
+print(repeated_fruits)      
+# Checking if the concatenated list is empty
+
+# extend() method to add multiple elements
+gems1 = ["diamond", "ruby"]
+gems2 = ["sapphire", "emerald"]
+gems1.extend(gems2)
+print(gems1)  # ['diamond', 'ruby', 'sapphire', 'emerald']
+# Using the insert() method to add an element at a specific position
+gems1.insert(2, "topaz")
+print(gems1)  # ['diamond', 'ruby', 'topaz', 'sapphire', 'emerald']
+# Using the pop() method to remove and return the last element
+last_gem = gems1.pop()  
+print(last_gem)  # 'emerald'
+print(gems1)  # ['diamond', 'ruby', 'topaz', 'sapphire']
+# Using the index() method to find the index of an element
+index_of_ruby = gems1.index("ruby")
+print(index_of_ruby)  # 1
+# Using the count() method to count occurrences of an element
+count_of_topaz = gems1.count("topaz")
+print(count_of_topaz)
+# 1, since "topaz" appears once in the list
+# Using the clear() method to remove all elements from the list
+gems1.clear()
+print(gems1)  # Should print an empty list
+
+#What is append?
+#If you are doing list one equals to this list one dot, append this.
+#That means this total entity five comma six is appended to the list as a new element.
+# So the list one is going to be a list of five elements.
+# If you are doing list one equals to this list one dot append this, that means this total entity five comma six is appended to the list as a new element.  
+#So the new element, the fifth element is going to be a list.
+phone_list = ["iPhone", "Samsung", "Google Pixel"]
+# Adding a new phone to the list
+phone_list.append("OnePlus")
+print(phone_list)  # ['iPhone', 'Samsung', 'Google Pixel', 'OnePlus']   
+
+phone_list.append([
+    "Nokia", "Samsung SK23"])
+print(phone_list) 
