@@ -195,3 +195,55 @@ print(phone_list)  # ['iPhone', 'Samsung', 'Google Pixel', 'OnePlus']
 phone_list.append([
     "Nokia", "Samsung SK23"])
 print(phone_list) 
+
+# del command to delete an element from the list
+
+delete_list = [
+    "apple", 
+    "banana", 
+    "cherry", 
+    "date"]
+# Deleting the second element (index 1)
+del delete_list[1]
+print(delete_list)  # ['apple', 'cherry', 'date']
+# Deleting the entire list
+del delete_list
+# print(delete_list)  # This will raise an error since delete_list no longer exists 
+# Using the pop() method to remove and return the last element
+pop_list = ["apple", "banana", "cherry"]
+last_fruit = pop_list.pop()  
+print(last_fruit)  # 'cherry'
+print(pop_list)  # ['apple', 'banana']  
+# Using the pop() method to remove and return an element at a specific index
+second_fruit = pop_list.pop(1)  
+print(second_fruit)  # 'banana'
+print(pop_list)  # ['apple']    
+# Using the index() method to find the index of an element
+index_list = ["apple", "banana", "cherry"]
+index_of_banana = index_list.index("banana")    
+print(index_of_banana)  # 1
+# Using the count() method to count occurrences of an element
+count_list = ["apple", "banana", "cherry", "banana"]    
+count_of_banana = count_list.count("banana")
+print(count_of_banana)
+# 2, since "banana" appears twice in the list
+
+# pop() vs remove()
+# pop() removes an element at a specific index and returns it, while remove() removes the first occurrence of a specified value.
+# Example of pop()
+example_list = ["apple", "banana", "cherry"]
+removed_item = example_list.pop(1)  # Removes "banana"
+print(removed_item)  # 'banana'
+print(example_list)  # ['apple', 'cherry']
+# Example of remove()
+example_list.remove("apple")  # Removes the first occurrence of "apple"
+print(example_list)  # ['cherry']   
+# Using the clear() method to remove all elements from the list
+clear_list = ["apple", "banana", "cherry"]
+clear_list.clear()
+print(clear_list)  # Should print an empty list
+# Using the copy() method to create a shallow copy of the list
+copy_list = ["apple", "banana", "cherry"]
+shallow_copy = copy_list.copy()
+print(shallow_copy) # ['apple', 'banana', 'cherry'] 
+# Modifying the original list does not affect the copy
