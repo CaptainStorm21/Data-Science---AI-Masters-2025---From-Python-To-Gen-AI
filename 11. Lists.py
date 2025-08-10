@@ -247,3 +247,132 @@ copy_list = ["apple", "banana", "cherry"]
 shallow_copy = copy_list.copy()
 print(shallow_copy) # ['apple', 'banana', 'cherry'] 
 # Modifying the original list does not affect the copy
+
+# sort()
+# Using the sort() method to sort the list in ascending order   
+sort_list = ["banana", "apple", "cherry"]
+sort_list.sort()
+print(sort_list)  # ['apple', 'banana', 'cherry']
+# Using the sort() method with reverse=True to sort in descending order
+sort_list.sort(reverse=True)    
+print(sort_list)  # ['cherry', 'banana', 'apple']   
+# Using the sorted() function to return a new sorted list without modifying the original
+original_list = ["banana", "apple", "cherry"]
+sorted_list = sorted(original_list)
+print(sorted_list)  # ['apple', 'banana', 'cherry']
+# The original list remains unchanged
+print(original_list)    
+# ['banana', 'apple', 'cherry']
+# Using the sorted() function with reverse=True to return a new sorted list in descending order
+sorted_list_desc = sorted(original_list, reverse=True)
+print(sorted_list_desc)  # ['cherry', 'banana', 'apple']
+# The original list remains unchanged
+print(original_list)  # ['banana', 'apple', 'cherry']           
+# Using the reverse() method to reverse the order of the list
+reverse_list = ["banana", "apple", "cherry"]
+reverse_list.reverse()
+print(reverse_list) # ['cherry', 'apple', 'banana']     
+# Using the reversed() function to return an iterator that yields the elements of the list in reverse order
+reversed_list = list(reversed(reverse_list))
+print(reversed_list)  # ['banana', 'apple', 'cherry']       
+# The original list remains unchanged
+print(reverse_list)  # ['cherry', 'apple', 'banana']
+    # Using the join() method to concatenate elements of a list into a string
+join_list = ["apple", "banana", "cherry"]
+joined_string = ", ".join(join_list)
+print(joined_string)  # 'apple, banana, cherry' 
+# Using the split() method to split a string into a list
+split_string = "apple, banana, cherry"
+split_list = split_string.split(", ")
+print(split_list)   
+# ['apple', 'banana', 'cherry']
+# Using the zip() function to combine two lists into a list of tuples
+list1 = [1, 2, 3]       
+
+list2 = ["a", "b", "c"]
+zipped_list = list(zip(list1, list2))
+print(zipped_list)  # [(1, 'a'), (2, 'b'), (3, 'c')]
+# Using the enumerate() function to get an index and value for each element in a list
+enumerated_list = list(enumerate(join_list))
+print(enumerated_list)  # [(0, 'apple'), (1, 'banana'), (2, 'cherry')]
+# Using the map() function to apply a function to each element in a list
+squared_list = list(map(lambda x: x**2, list1)) 
+print(squared_list)  # [1, 4, 9]                
+# Using the filter() function to filter elements in a list based on a condition
+filtered_list = list(filter(lambda x: x > 1, list1))
+print(filtered_list)        
+# [2, 3]        
+# Using the reduce() function from functools to apply a function cumulatively to the items of a list
+from functools import reduce
+sum_list = reduce(lambda x, y: x + y, list1)
+print(sum_list)  # 6    
+# Using the any() function to check if any element in a list is True
+any_list = [False, True, False]
+print(any(any_list))  # True, since there is at least one True element      
+# Using the all() function to check if all elements in a list are True
+all_list = [True, True, True]
+print(all(all_list))        # True, since all elements are True
+# Using the max() function to find the maximum element in a list
+max_list = [1, 2, 3, 4, 5]
+print(max(max_list))                        
+# 5, since 5 is the maximum element in the list
+# Using the min() function to find the minimum element in a list
+min_list = [1, 2, 3, 4, 5]
+print(min(min_list))  # 1, since 1 is the minimum element in the list
+# Using the sum() function to calculate the sum of elements in a list
+sum_list = [1, 2, 3, 4, 5]
+print(sum(sum_list))  # 15, since the sum of elements is 15
+
+# sort() vs sorted()
+# sort() modifies the original list in place, while sorted() returns a new sorted list without modifying the original.
+# Example of sort()     
+example_sort = [3, 1, 2]
+example_sort.sort()
+print(example_sort)  # [1, 2, 3]
+# Example of sorted()
+example_sorted = [3, 1, 2]
+new_sorted = sorted(example_sorted)
+print(new_sorted)  # [1, 2, 3]
+print(example_sorted)  # [3, 1, 2], original list remains unchanged
+# Using the reverse() method to reverse the order of the list
+reverse_example = [3, 1, 2]
+reverse_example.reverse()
+print(reverse_example)  # [2, 1, 3]
+# Using the reversed() function to return an iterator that yields the elements of the list in reverse order
+reversed_example = list(reversed(reverse_example))
+print(reversed_example) # [3, 1, 2], original list remains unchanged
+# Using the join() method to concatenate elements of a list into a string
+join_example = ["apple", "banana", "cherry"]
+joined_string_example = ", ".join(join_example)
+print(joined_string_example)
+# 'apple, banana, cherry'
+# Using the split() method to split a string into a list
+split_example = "apple, banana, cherry"     
+split_list_example = split_example.split(", ")
+print(split_list_example)  # ['apple', 'banana', 'cherry']
+
+# shadow copy vs deep copy
+# Shadow copy creates a new reference to the same object, while deep copy creates a new object with a copy of the original object's data.
+# Example of shadow copy        
+shadow_copy = [1, 2, 3]
+shadow_copy_ref = shadow_copy  # This creates a new reference to the same list
+shadow_copy_ref.append(4)
+print(shadow_copy)  # [1, 2, 3, 4], both references point to the same list              
+# Example of deep copy
+import copy
+deep_copy = [1, 2, 3]
+deep_copy_ref = copy.deepcopy(deep_copy)        
+deep_copy_ref.append(4)     
+print(deep_copy)  # [1, 2, 3], original list remains unchanged
+print(deep_copy_ref)  # [1, 2, 3, 4], deep copy has its own separate data       
+# Using the copy() method to create a shallow copy of the list  
+shallow_copy_example = ["apple", "banana", "cherry"]
+shallow_copy_ref_example = shallow_copy_example.copy()
+print(shallow_copy_ref_example) 
+# ['apple', 'banana', 'cherry'] 
+# Modifying the original list does not affect the copy
+shallow_copy_example.append("date")
+print(shallow_copy_example)             
+# ['apple', 'banana', 'cherry', 'date']
+print(shallow_copy_ref_example) # ['apple', 'banana', 'cherry'] 
+# Using the copy() method to create a shallow copy of a nested list
