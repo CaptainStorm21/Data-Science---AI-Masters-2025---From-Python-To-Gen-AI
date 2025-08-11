@@ -34,15 +34,37 @@
 # new_tuple = t + t2
 # type(new_tuple)  # Output: <class 'tuple'>
 # type(t2)
-t4 = ('Hello', 2, 3.14)
-print(len(t4)) # Output: 3
-nested_tuple = (1, 2, 3, (4, 5))
-print(len(nested_tuple))  # Output: 4   
-# Tuples can be unpacked into variables
-var = t4[0]
-print(var) # Output: Hello
+# t4 = ('Hello', 2, 3.14)
+# print(len(t4)) # Output: 3
+# nested_tuple = (1, 2, 3, (4, 5))
+# print(len(nested_tuple))  # Output: 4   
+# # Tuples can be unpacked into variables
+# var = t4[0]
+# print(var) # Output: Hello
 
-# how to access nested tuple inside of a tuple
-nested_tuple = (1, 2, (3, 4), 5)
-nested_element = nested_tuple[2][1] # Accessing the second element of the nested tuple
-print(nested_element)  # Output: 4  
+# # how to access nested tuple inside of a tuple
+# nested_tuple = (1, 2, (3, 4), 5)
+# nested_element = nested_tuple[2][1] # Accessing the second element of the nested tuple
+# print(nested_element)  # Output: 4  
+
+# type of tuples
+# my_tuple = (1,)
+# my_tuple2 = (100)
+# my_tuple3 = 200
+# print(type(my_tuple))  # Output: <class 'tuple'>
+# print(type(my_tuple2))  # Output: <class 'int'> (not a tuple, just an integer)
+# print(type(my_tuple3))
+
+# indexing in tuples        
+# my_tuple = (10, 20, 30, 40, 50, "London", "Hiroshima")
+# print (len(my_tuple))   # Output: 5
+# print(my_tuple[0])  # Output: 10
+# print(my_tuple[3])  # Output: 40
+# # print last 2 fron my tuple
+# print(my_tuple[3:4])  # Output: 50      
+# print(my_tuple[-1])  # Output: London
+# print(my_tuple[-2])  # Output: 50
+
+hiroshima = "Hello Hiroshima",
+print(hiroshima) # Output: ('Hello Hiroshima',)
+print(hiroshima[3:])  # Output: ('Hiroshima',)
