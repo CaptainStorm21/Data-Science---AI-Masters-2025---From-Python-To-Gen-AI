@@ -65,6 +65,70 @@
 # print(my_tuple[-1])  # Output: London
 # print(my_tuple[-2])  # Output: 50
 
-hiroshima = "Hello Hiroshima",
-print(hiroshima) # Output: ('Hello Hiroshima',)
-print(hiroshima[3:])  # Output: ('Hiroshima',)
+hiroshima = ("Hello Hiroshima Flow",)  # This is a tuple containing a string
+my_string = hiroshima[0]  # Access the string element from the tuple
+
+hiroshima_sliced = my_string[3:7]  # Slice the string
+print("printing sliced string:")
+print(hiroshima_sliced)  # Expected Output: lo Hiro
+
+print(my_string[0:5])  # Slice the string
+print(my_string[10:20])   #  Equivalent slice, omitting the start index
+print(my_string[10:])  # Slice from index 10 to the end
+print(my_string[:5])
+
+t = (10, 20, 30, 40, 50)
+print(t[1:4])    # Output: (20, 30, 40)
+print(t[:3])     # Output: (10, 20, 30)
+print(t[::2])    # Output: (10, 30, 50)
+
+# Concatenating tuples
+t1 = (1, 2, 3)
+t2 = (4, 5, 6)
+t3 = t1 + t2
+print(t3)  # Output: (1, 2, 3, 4, 5, 6)
+
+# Mathematical operations on tuples
+t4 = (10, 20, 30, 89)
+print(t4[0] + t4[1]) # Output: 30
+print(sum(t4))  # Output: 60 (sum of all elements in the tuple)
+
+# Adding elements in mixex tuples
+mixed_tuple = (2, 4, 71, 332, "Hello", "los angeles", True, 2123.22)
+original_numbers = [item for item in mixed_tuple if isinstance(item, (int, float))]
+int_numbers = [item for item in original_numbers if isinstance(item, int)]
+float_numbers = [item for item in original_numbers if isinstance(item, float)]
+
+
+# Nested tuples
+nested_tuple = (1, 2, (3, 4), 5)
+nested_element = nested_tuple[2][1] # Accessing the second element of the nested tuple
+print(nested_element)  # Output: 4
+# Accessing elements in a nested tuple
+nested_tuple = (1, 2, (3, 4), 5)
+print(nested_tuple[2])  # Output: (3, 4)
+print(nested_tuple[2][0])  # Output: 3
+print(nested_tuple[2][1])  # Output: 4      
+# Accessing elements in a nested tuple
+nested_tuple = (1, 2, (3, 4), 5)
+print(nested_tuple[2])  # Output: (3, 4)
+print(nested_tuple[2][0])  # Output: 3
+
+# tuple immutability
+# Tuples are immutable, meaning once created, they cannot be modified.
+# This means you cannot add, remove, or change elements in a tuple. 
+# However, you can create a new tuple based on an existing one.
+# Example of creating a new tuple from an existing one
+
+list_countries = ["USA", "Canada", "Mexico"]
+tuple_countries = tuple(list_countries)
+print(tuple_countries)  # Output: ('USA', 'Canada', 'Mexico')   
+# list_countries[3] = "UK"
+# print(tuple_countries)  
+# This will raise an error because tuples are immutable   
+list_countries[0:2] = ["UK", "Germany"]
+tuple_countries = tuple(list_countries)
+print(tuple_countries)  # Output: ('UK', 'Germany', 'Mexico')
+new_countries = tuple_countries + ("France", "Spain", "Italy", "Japan", "China")
+print(new_countries)  # Output: ('UK', 'Germany', 'Mexico', 'France', 'Spain', 'Italy', 'Japan', 'China')
+
