@@ -146,6 +146,10 @@ print(tuple_fruits)  # Output: ('apple', 'banana', 'cherry')
 tuple_numbers = (5, 2, 9, 1, 5, 6)
 sorted_tuple = tuple(sorted(tuple_numbers))
 print(sorted_tuple)  # Output: (1, 2, 5, 5, 6, 9)   
+assigned_sorted_tuple = tuple(sorted_tuple)
+print("assigned_sorted_tuple:", assigned_sorted_tuple)  
+# Output: (1, 2, 5, 5, 6, 9)
+
 # Tuples can be used to store multiple values in a single variable
 # Example of a tuple containing different data types
 mixed_tuple = (1, "Hello", 3.14, True)
