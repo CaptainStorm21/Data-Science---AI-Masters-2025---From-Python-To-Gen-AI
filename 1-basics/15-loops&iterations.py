@@ -155,3 +155,32 @@ for emp_id, details in employee.items():
 for emp_id, details in employee.items():
     print(details['name'])  # This will print each employee's name
     
+# Example: Print all employee occupations
+for i,j in employee.items():
+    print(j['position'])
+    
+# Example: Print all employee occupations
+for i,j in employee.items():
+    print(i)
+    
+# Example of interating through values in a dictionary
+range_dict = {
+    "a": 1,
+    "b": 2, 
+    "c": 3,
+    "d": 4,
+    "e": 5,
+    "f": 6
+}
+for i in list(range_dict.keys())[3:5]:
+    print(f"Range in the dictionary is {i}")
+    # This will print the keys from index 3 to 5 in the dictionary
+    
+car_list = ["Toyota", "Honda", "Ford", "Chevrolet"]
+car_list2 = []
+# for i in car_list:
+#    car_list2.append(i)
+# print(car_list2)
+car_list2 = [i for i in car_list]
+print(car_list2)  # Output: ['Toyota', 'Honda', 'Ford', 'Chevrolet']
+
