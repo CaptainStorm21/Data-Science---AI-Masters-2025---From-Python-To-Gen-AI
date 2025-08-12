@@ -132,3 +132,21 @@ print(tuple_countries)  # Output: ('UK', 'Germany', 'Mexico')
 new_countries = tuple_countries + ("France", "Spain", "Italy", "Japan", "China")
 print(new_countries)  # Output: ('UK', 'Germany', 'Mexico', 'France', 'Spain', 'Italy', 'Japan', 'China')
 
+# Converting a tuple to a list
+tuple_numbers = (1, 2, 3, 4, 5)
+list_numbers = list(tuple_numbers)
+print(list_numbers)  # Output: [1, 2, 3, 4, 5]  
+# Converting a list to a tuple
+list_fruits = ["apple", "banana", "cherry"]
+tuple_fruits = tuple(list_fruits)
+print(tuple_fruits)  # Output: ('apple', 'banana', 'cherry')    
+# Tuples can be used as keys in dictionaries because they are immutable
+
+# Sorting a tuple
+tuple_numbers = (5, 2, 9, 1, 5, 6)
+sorted_tuple = tuple(sorted(tuple_numbers))
+print(sorted_tuple)  # Output: (1, 2, 5, 5, 6, 9)   
+# Tuples can be used to store multiple values in a single variable
+# Example of a tuple containing different data types
+mixed_tuple = (1, "Hello", 3.14, True)
+print(mixed_tuple)  # Output: (1, 'Hello', 3.14, True)          
