@@ -25,4 +25,16 @@ def factorial_func(n):
         print ( fact, "is in power of", n)
 factorial_func(5)
 
+# sum of all natural numbers till the number provided
+def sum_natural (n):
+    num = 0 
+    for i in range(1, n+1):
+        num = num+i
+    return num
+print(sum_natural(5))
 
+
+def func_1 (name, age = 30):
+    print ("name ", name)
+    print ("age ", age)
+func_1("Dave", 23)
