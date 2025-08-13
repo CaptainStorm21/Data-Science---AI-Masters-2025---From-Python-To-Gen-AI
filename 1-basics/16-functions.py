@@ -38,3 +38,9 @@ def func_1 (name, age = 30):
     print ("name ", name)
     print ("age ", age)
 func_1("Dave", 23)
+
+
+# Lambda functions
+# lambda argument: expressions
+x = lambda a: a+10
+print (x(521))
