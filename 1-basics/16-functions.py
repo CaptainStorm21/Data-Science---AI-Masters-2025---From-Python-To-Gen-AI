@@ -44,3 +44,15 @@ func_1("Dave", 23)
 # lambda argument: expressions
 x = lambda a: a+10
 print (x(521))
+
+x = lambda a: a%2==0
+print (x(323))
+
+z = lambda a: "even" if a % 2 == 0 else "odd"
+print(z(221))
+
+# add create lanbda fuction that adds 2 numbers
+
+sum_int = lambda a,b: a+b
+print (sum_int(3,2))
+
