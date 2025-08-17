@@ -1,6 +1,7 @@
 # Map Reduce Filter
 
 import math
+import statistics
 
 
 """
@@ -57,8 +58,18 @@ print("Cities with temperatures above 0°C in Fahrenheit:")
 for city, temp in result_flat.items():
     print(f"{city}: {temp:.1f}°F")
 
+# Using map
+# Lambda function to convert Celsius to Fahrenheit
+cel_to_f = lambda data: (data[0], (9/5)*data[1]+32)
 
+# List of tuples (city, temperature) in Celsius
+temps = [("Oulu", 0), ("Cairo", 20), ("Dubai", 100), ("South Pole", -10)]
 
+# Apply the lambda function to each tuple in temps using map
+filtered_map_cities = map(cel_to_f, temps)
+
+# Convert the result to a list and print
+print(list(filtered_map_cities))
 
 """
 Reduce - an operation that breaks down the entire
@@ -67,3 +78,32 @@ and uses the result from each operation
 with the successive element
 """
 
+cars = [
+    ("Toyota Camry", 2012, 18000),
+    ("Honda Accord", 2018, 25000),
+    ("Tesla Model 3", 2021, 35000),
+    ("Ford Fiesta", 2015, 15000),
+    ("BMW 3 Series", 2019, 45000),
+    ("Chevrolet Malibu", 2016, 22000)
+]
+
+# Filter cars that are newer than 2015 and cost more than $20,000
+filtered_cars = filter(lambda car: car[1] > 2015 and car[2] > 20000, cars)
+
+# Convert the result to a list and print
+filtered_cars_list = list(filtered_cars)
+print(filtered_cars_list)
+
+# List of numbers
+numbers = [10, 20, 30, 40, 50, 60, 70, 80, 90]
+
+# Calculate the mean (average) of the list
+mean_value = statistics.mean(numbers)
+print(mean_value)
+
+# Filter out numbers that are above the mean
+filtered_numbers = filter(lambda x: x > mean_value, numbers)
+
+# Convert the result to a list and print
+filtered_numbers_list = list(filtered_numbers)
+print("Numbers above the mean:", filtered_numbers_list)
