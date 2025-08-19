@@ -2,6 +2,7 @@
 
 import math
 import statistics
+from functools import reduce
 
 
 """
@@ -107,3 +108,33 @@ filtered_numbers = filter(lambda x: x > mean_value, numbers)
 # Convert the result to a list and print
 filtered_numbers_list = list(filtered_numbers)
 print("Numbers above the mean:", filtered_numbers_list)
+
+# Getting rid of Null / NaN values
+names = ["Alex", "Mary", 0, 0.00, "Valeria", ""]
+filter(None, names)
+print (list(filter(None, names)))
+
+nums = [21, 33, 22.3, 0, 0.00, "", 0]
+filter(None, nums)
+print (list(filter(None, nums)))
+
+# reduce
+nums_data = [1, 2, 3, 4, 5]
+multiplier = lambda x, y:x*y 
+print(reduce(multiplier, nums_data))
+
+prev = nums_data[0]
+for i in nums_data[1:]:
+    prev = prev * i
+print(prev)
+
+prev = nums_data[0]
+for i in nums_data:
+    i = i * prev
+    prev = i
+print(prev)
+
+# Multiply all the items in a list
+multi_data2 = [1, 2, 3, 4, 5]
+result = reduce(lambda x, y: x * y, multi_data2)
+print(result)
