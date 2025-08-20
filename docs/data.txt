@@ -1,0 +1,5 @@
+First Name     Last Name      Age       School    Gender    Occupation
+Ali            Miller         29        MIT       Male      Scientist 
+Alisa          Miller         29        MIT       Male      Scientist 
+Monique        Schiller       29        MIT       Female    IT nerd   
+Antika         Schiller       29        MIT       Female    IT nerd   
