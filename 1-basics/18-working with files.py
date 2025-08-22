@@ -1,4 +1,6 @@
 from datetime import datetime
+import pandas as pd
+
 # Define the file name where data will be saved
 text_file = "docs/flora_fauna.txt"
 
@@ -99,3 +101,6 @@ file = open(text_file, 'r')
 for line in file:
     print(line)
     
+# File Handling in Data Science
+df = pd.read_csv('docs/data_cvs.cvs')
+print(df.head())
