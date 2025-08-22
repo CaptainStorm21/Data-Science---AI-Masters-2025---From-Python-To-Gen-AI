@@ -88,3 +88,14 @@ with open(text_file, 'r+') as file:
 # Print the result
 with open(text_file, 'r') as file:
     print(file.read())
+    
+# Print the result
+with open(text_file, 'a+') as file:
+    file.write("\n")
+    file.write("I AM WRITING!!!!")
+    print(file.read())
+
+file = open(text_file, 'r')
+for line in file:
+    print(line)
+    
