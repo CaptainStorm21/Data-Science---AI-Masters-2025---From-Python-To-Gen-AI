@@ -54,3 +54,37 @@ file = open(text_file, 'a')
 file.write ('The darkened waves slammed the shores')
 file = open(text_file, 'r')
 print(file.read())
+
+# append operation
+with open(text_file, 'a') as file:   
+    file.write('\t'+ '\n'+'This is write Operation')
+
+file = open(text_file, 'r' )
+for line in file:
+    print(line)
+
+# \n operator
+file = open(text_file, 'w')
+file.write ('\n'+"This is not what you think this is!")
+file.write ('\n'+"Thank you for trying out python")
+file = open(text_file, 'r')
+print(file.read())
+        
+# r+
+# Open the file in 'r+' mode to read and write
+with open(text_file, 'r+') as file:
+    # Read the entire content of the file into a string
+    existing_content = file.read()
+
+    # Go back to the start of the file
+    file.seek(0, 0)
+
+    # New text to be added
+    new_text = '\nUkraine is beautiful'
+
+    # Write the existing content with the new text appended
+    file.write(existing_content + new_text)
+
+# Print the result
+with open(text_file, 'r') as file:
+    print(file.read())
