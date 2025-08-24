@@ -32,5 +32,7 @@ else:
     discount = 100
 print("Discount applied:", discount)
 
+# interate over the range of values
 for i in range(1, 5):
     print(i, end='.')
+    
